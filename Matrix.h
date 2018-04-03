@@ -1,9 +1,18 @@
-//
-// Created by LN on 3/26/2018.
-//
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-#ifndef EE553_SESSION9_MATRIX_H
-#define EE553_SESSION9_MATRIX_H
+/* 
+ * File:   Matrix.h
+ * Author: Class2018
+ *
+ * Created on April 2, 2018, 6:54 PM
+ */
+
+#ifndef MATRIX_H
+#define MATRIX_H
 #include <iostream>
 using namespace std;
 
@@ -13,18 +22,14 @@ private:
     int rows, cols;
 public:
     Matrix(int r, int c, double v);
-
     ~Matrix();
-
+    Matrix(const Matrix& orig);
     double& operator()(int i, int j);
     double operator()(int i, int j) const;
     Matrix operator + (const Matrix& m);
     Matrix operator = (const Matrix& m);
-    Matrix operator * (const Matrix& m);
+Matrix operator * (const Matrix& m);
 
 
+#endif /* MATRIX_H */
 
-
-};
-
-#endif //EE553_SESSION9_MATRIX_H
